@@ -423,11 +423,6 @@ label define FRS_result_list 1 completed 2 not_at_home 3 postponed 4 refused 5 p
 	encode FRS_result, gen(FRS_resultv2) lab(FRS_result_list)
 
 
-*Participated in previous survey
-capture label var	previous_PMA		"Previously participated in PMA 2020 survey?"
-capture encode previous_PMA, gen(previous_PMAv2) lab(yes_no_dnk_nr_list)
-
-
 /*Additional questions added in July 2016 to core*/
 capture confirm var ever_birth
 if _rc==0 {
